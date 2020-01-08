@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>这是答题页面</title>
+    <style>
+        .t-100{ margin:0 auto; width:100%}
+        .t-center{ margin:0 auto; width:450px}
+        /* 要是网页中间内容宽度1000px */
+    </style>
+    <link rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/css/bootstrap.min.css">
+
+</head>
+<body>
+<div >
+  <h1>题目1</h1>
+
+<h4>题目描述:输入两个数,计算他们的和</h4>
+
+<form action="/upload" method="post" enctype="multipart/form-data" >
+    <input type ="file" name = "file" value = "请选择文件">
+    <input  type="submit"></input>
+    <h4 th:text="${up}" style="color:red;"> </h4>
+</form>
+  <br>
+
+<h4>运行结果:</h4>
+    <table class="table table-hover">
+        <thead>
+        <tr>
+            <th>#</th>
+            <th>result</th>
+            <th>err</th>
+            <th>compare</th>
+            <th>runtime</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr  th:each="user : ${messaage}">
+            <th scope="row" th:text="${user.date}">1</th>
+            <td th:text="${user.result}">neo</td>
+            <td th:text="${user.err}">Otto</td>
+            <td th:text="${user.compare}">Otto</td>
+            <td th:text="${user.time}">Otto</td>
+        </tr>
+        </tbody>
+    </table>
+
+</div>
+</body>
+</html>

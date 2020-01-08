@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>这是一个主页面</title>
+    <link rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/css/bootstrap.min.css">
+
+</head>
+<body>
+<nav class="navbar navbar-default">
+    <div class="container-fluid">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header">
+
+            <a class="navbar-brand" href="#">题目列表</a>
+        </div>
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav">
+                <li class="active"><a href="#">在线比赛 <span class="sr-only">(current)</span></a></li>
+            </ul>
+            <ul class="nav navbar-nav">
+                <li class="active"><a href="#">排行榜 <span class="sr-only">(current)</span></a></li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+
+    <table class="table table-striped">
+        <tr class="active">
+            <td  data-width="20px">#</td>
+            <td >title</td>
+            <td >进入比赛</td>
+        </tr>
+        <tr >
+            <td  data-width="20px">1</td>
+            <td >两数之和</td>
+            <td ><a th:href="dati">答题</a></td>
+        </tr>
+        <tr ><td  data-width="20px">2</td>
+            <td >迪杰斯特拉</td>
+            <td ><a href="#">答题</a></td>
+        </tr>
+        <tr >
+            <td  data-width="20px">3</td>
+            <td >弗洛伊德</td>
+            <td ><a href="#">答题</a></td>
+        </tr>
+        <tr >
+            <td  data-width="20px">4</td>
+            <td >克鲁斯卡尔</td>
+            <td ><a href="#">答题</a></td>
+        </tr>
+    </table>
+
+
+</body>
+</html>
